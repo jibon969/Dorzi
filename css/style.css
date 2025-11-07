@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+/* CSS variables for quick theming */
+:root{
+  --footer-bg: #FBFBF9;
+  --footer-ink: #0f1724;       /* main text */
+  --muted: #6b6b84;            /* secondary text */
+  --accent: #FF5D22;           /* brand accent */
+  --accent-2: #f8b400;         /* secondary accent if needed */
+  --soft-border: rgba(15,23,36,0.06);
+  --radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #FFFFFF;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 80px; /* same as navbar height */
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+/*======================================================= 
+    header top section 
+======================================================= */
+.topbar {
+    background-color: #FEFCF8;
+    height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    color: black;
+    padding: 8px;
+}
+
+.topbar .contact_info i {
+    color: black;
+}
+
+.topbar .contact_info i a,
+.topbar .contact_info i span {
+    padding-left: 5px;
+    color: black;
+}
+
+.topbar .contact_info i a {
+    line-height: 0;
+    transition: 0.3s;
+}
+
+.topbar .contact_info i a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.topbar .social_links a {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 0;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.topbar .social_links a:hover {
+    color: black;
+}
+
+/*======================================================= 
+  HEADER STYLES
+=======================================================*/
+
+/* Sticky header with smooth shadow */
+.headerBackground {
+  background: #000; /* black background */
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+}
+
+/* Logo styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar items */
+.navbar-nav .nav-item {
+  margin-left: 5px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f8b400; /* gold accent */
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8b400 !important;
+}
+
+/* Navbar toggle (mobile menu button) */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .navbar-nav .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-collapse {
+    background: #111;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .navbar-brand img {
+    width: 140px;
+  }
+}
+
+/*======================================================= 
+    slider section 
+======================================================= */
+
+.slider-video {
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.slider-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes image fill area while keeping aspect ratio */
+  display: block;
+}
+
+/*======================================================= 
+    head toe 
+======================================================= */
+/* Section background and padding */
+.head-toe {
+  background-color: #f8f9fa;
+}
+
+/* Grid layout for 5 items per row */
+.head-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .head-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  .head-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .head-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .head-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Image container */
+.head-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 400px;
+  width: 350px;
+  background: #e9ecef;
+}
+
+/* Images */
+.head-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+  display: block;
+}
+
+/* Hover image hidden initially */
+.head-img .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* Overlay text */
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect */
+.head-img:hover .main-img {
+  opacity: 0;
+}
+.head-img:hover .hover-img {
+  opacity: 1;
+}
+.head-img:hover .overlay-text {
+  opacity: 1;
+}
+
+/*======================================================= 
+    Footer section 
+======================================================= */
+
+.high-tech{
+  background-color: #F5F4EF;
+  padding: 60px;
+}
+.left-high-tech h2{
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.fixed-width-text {
+  max-width: 500px;  
+  margin: 0 auto; 
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+.outline-btn {
+   margin: 0 auto; 
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid #000;  
+  color: #000;           
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.outline-btn:hover {
+  background-color: #000;  /* black background */
+  color: #fff;             /* white text */
+}
+
+
+
+/*======================================================= 
+    Footer section 
+======================================================= */
+
+/* overall footer base */
+.footer-section{
+  background: linear-gradient(180deg, rgba(251,251,249,1) 0%, rgba(244,245,248,1) 100%);
+  padding: 70px 0 40px;
+  color: var(--footer-ink);
+  font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle decorative shape (right side) */
+.footer-section::after{
+  content:"";
+  position: absolute;
+  right: -10%;
+  top: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,93,34,0.06), transparent 40%),
+              radial-gradient(circle at 70% 70%, rgba(248,180,0,0.03), transparent 30%);
+  transform: rotate(15deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* widget card look */
+.singleFooterWidget{
+  position: relative;
+  z-index: 2;
+  padding-right: 20px;
+}
+
+/* footer headings */
+.singleFooterWidget h3{
+  font-size: 18px;
+  color: var(--footer-ink);
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* nicer link list */
+.footerLinksList{
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.footerLinksList li{
+  margin-bottom: 10px;
+}
+
+.footerLinksList a{
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .18s ease, color .18s ease;
+  padding: 4px 0;
+  border-radius: 6px;
+}
+.footerLinksList a:hover{
+  color: var(--accent);
+  transform: translateX(6px);
+}
+
+/* contact / info lists */
+.footerContactInfo li, .footerLinksList li{
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* social icons row */
+.socialMediaList{
+  display:flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.socialMedia{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  color:#fff;
+  background: linear-gradient(135deg,#6b6b84,#4a4a66);
+  text-decoration:none;
+  font-size:16px;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  box-shadow: 0 6px 18px rgba(15,23,36,0.06);
+}
+.socialMedia:hover{
+  transform: translateY(-4px) scale(1.03);
+  background: linear-gradient(135deg, var(--accent), #ff8a5a);
+  box-shadow: 0 10px 30px rgba(255,93,34,0.12);
+}
+
+/* Optional newsletter box (small and elegant) */
+.footer-newsletter{
+  background: rgba(255,255,255,0.9);
+  border: 1px solid var(--soft-border);
+  padding: 16px;
+  border-radius: 12px;
+  display:flex;
+  gap: 8px;
+  align-items: center;
+  max-width: 520px;
+  margin-top: 6px;
+}
+.footer-newsletter input[type="email"]{
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 14px;
+  background: transparent;
+}
+.footer-newsletter button{
+  background: linear-gradient(90deg,var(--accent), #ff8a5a);
+  color: white;
+  border: none;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.footer-newsletter button:hover{ transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,93,34,0.14); }
+
+/* bottom area: centered content and small text */
+.footerBottomArea{
+  margin-top: 58px;
+  border-top: 1px solid var(--soft-border);
+  padding-top: 28px;
+  padding-bottom: 28px;
+  background: transparent;
+  z-index: 2;
+}
+
+/* copyright text */
+.footerBottomArea .fw-bold{
+  color: var(--footer-ink);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* designer link */
+.footerBottomArea small a{
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+.footerBottomArea small a:hover{
+  text-decoration: underline;
+}
+
+/* right-side inline list for legal/policy links (if present) */
+.footerBottomArea ul{
+  list-style:none;
+  padding-left:0;
+  margin:0;
+}
+.footerBottomArea ul li{
+  display:inline-block;
+  margin-left: 14px;
+  color: var(--muted);
+  font-weight:600;
+}
+
+/* separators for large screens */
+@media(min-width:992px){
+  .singleFooterWidget{
+    padding-right: 40px;
+  }
+
+  /* vertical separators between columns */
+  .singleFooterWidget:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6%;
+    height: 70%;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--soft-border), transparent);
+    transform: translateX(20px);
+    opacity: .9;
+  }
+}
+
+/* responsive tweaks */
+@media(max-width:991px){
+  .footer-section{ padding: 50px 0 30px; }
+  .footer-newsletter{ max-width:100%; }
+  .footerBottomArea{ text-align:center; }
+}
+
+/* little utility: back-to-top round button */
+#backToTop {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background: linear-gradient(90deg,var(--accent), #ff8a5a);
+  color:white;
+  box-shadow: 0 10px 30px rgba(255,93,34,0.12);
+  z-index: 9999;
+  cursor: pointer;
+  transform: translateY(100px);
+  transition: transform .28s cubic-bezier(.2,.9,.3,1), opacity .28s ease;
+  opacity: 0;
+}
+#backToTop.visible{ transform: translateY(0); opacity: 1; }
+
+/* subtle entrance animation for the columns */
+.singleFooterWidget{ 
+  will-change: transform, opacity;
+  transform: translateY(6px);
+  opacity: 0.98;
+  transition: transform .45s ease, opacity .45s ease;
+}

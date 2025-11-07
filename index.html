@@ -1,24 +1,265 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dorzi</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="shortcut icon" href="img/favicon/favicon-16x16.png" type="image/x-icon" />
 
-    <title>Dorzi</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-  </head>
-  <body>
-    <h1>Hello, Dorzi!</h1>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Nunito:300,400,600,700|Poppins:300,400,500,600,700" rel="stylesheet" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- header-top -->
+    <section class="header-top">
+      <section class="topbar d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+          <!-- Contact Info -->
+          <div class="contact_info d-flex align-items-center">
+            <i class="fa fa-envelope d-flex align-items-center">
+              <a href="mailto:jayed.swe@gmail.com" class="mx-1">dirzi@gmail.com</a>
+            </i>
+            <a href="tel:019871-32107" class="d-flex align-items-center ms-4 text-decoration-none">
+              <i class="fa fa-phone me-2"></i>
+              <span>01980000000</span>
+            </a>
+          </div>
+          <!-- Social Links -->
+          <div class="social_links d-none d-md-flex align-items-center">
+            <a href="https://www.facebook.com/jibon969" class="navLink text-dark">
+              <i class="fab fa-facebook text-dark"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jibon969/" class="navLink">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="navLink">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Navbar -->
+    <section class="sticky-top">
+      <div class="header">
+        <nav class="headerBackground navbar navbar-expand-lg">
+          <div class="container">
+            <a href="index.html" class="navbar-brand">
+              <img src="img/header/header.png" alt="">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+              <div class="navbar-nav">
+                <a href="index.html" class="navItem nav-item nav-link text-white">Home</a>
+                <a href="#" class="navItem nav-item nav-link text-white">Custom Clothing</a>
+                <a href="#" class="navItem nav-item nav-link text-white">Women</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Video or image-->
+    <section class="slider-video">
+      <img src="img/slider/slider-1.PNG" alt="Slider Image">
+    </section>
+
+    <section class="head-toe py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <h3 class="fw-bold mx-4 mb-4">Bespoke from head to toe</h3>
+          </div>
+        </div>
+      </div>
+      <div class="head-row d-flex flex-wrap justify-content-center gx-3">
+        <div class="head-item">
+          <div class="head-img">
+            <img src="img/custom/blazer_2.webp" alt="Blazer front" class="main-img">
+            <img src="img/custom/tuxedo_2.webp" alt="Blazer hover" class="hover-img">
+            <!-- <div class="overlay-text">
+              <h5>Custom Blazer</h5>
+            </div> -->
+          </div>
+          <h6 class="mt-3 text-center">Custom Suits</h6>
+        </div>
+        <div class="head-item">
+          <div class="head-img">
+            <img src="img/custom/blazer_2.webp" alt="Blazer front" class="main-img">
+            <img src="img/custom/tuxedo_2.webp" alt="Blazer hover" class="hover-img">
+            <!-- <div class="overlay-text">
+              <h5>Custom Blazer</h5>
+            </div> -->
+          </div>
+          <h6 class="mt-3 text-center">Custom Dress</h6>
+        </div>
+        <div class="head-item">
+          <div class="head-img">
+            <img src="img/custom/blazer_2.webp" alt="Blazer front" class="main-img">
+            <img src="img/custom/tuxedo_2.webp" alt="Blazer hover" class="hover-img">
+            <!-- <div class="overlay-text">
+              <h5>Custom Blazer</h5>
+            </div> -->
+          </div>
+          <h6 class="mt-3 text-center">Men's Overcoats</h6>
+        </div>
+        <div class="head-item">
+          <div class="head-img">
+            <img src="img/custom/blazer_2.webp" alt="Blazer front" class="main-img">
+            <img src="img/custom/tuxedo_2.webp" alt="Blazer hover" class="hover-img">
+            <!-- <div class="overlay-text">
+              <h5>Custom Blazer</h5>
+            </div> -->
+          </div>
+          <h6 class="mt-3 text-center">Custom Blazers</h6>
+        </div>
+        <div class="head-item">
+          <div class="head-img">
+            <img src="img/custom/blazer_2.webp" alt="Blazer front" class="main-img">
+            <img src="img/custom/tuxedo_2.webp" alt="Blazer hover" class="hover-img">
+            <!-- <div class="overlay-text">
+              <h5>Custom Blazer</h5>
+            </div> -->
+          </div>
+          <h6 class="mt-3 text-center">Custom Tuxedo</h6>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="high-tech">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="left-high-tech">
+              <h2>High-tech
+                <br>
+                tailoring for
+                <br>every body
+              </h2>
+              <p class="text-center fixed-width-text">
+                When your clothes are made with care, you can feel it. Before our tailors handcraft your piece,
+                our algorithm uses a decade’s worth of sizing data to make sure it fits you right. Hard to believe, easy to prove.
+              </p>
+              <div class="text-center mt-4">
+                <a href="#" class="outline-btn">Know More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tech-img">
+              <img src="img/custom/tech.PNG" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
 
     
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    
+
+    <!--== Footer Section ==-->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="singleFooterWidget pl-5">
+              <h3>Men's Store</h3>
+              <ul class="footerLinksList">
+                <li><a href="#">Custom Suits</a></li>
+                <li><a href="#">Custom Dress Shirts</a></li>
+                <li><a href="#">Custom Blazers</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Explore -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="singleFooterWidget pl-5">
+              <h3>Women</h3>
+              <ul class="footerLinksList">
+                <li><a href="#">Women's Suits</a></li>
+                <li><a href="#">Women's Dress Shirt</a></li>
+                <li><a href="#">Women's Blazers</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Company -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="singleFooterWidget">
+              <h3>Company</h3>
+              <ul class="footerLinksList">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Perfect Fit Guarantee</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- Support -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="singleFooterWidget">
+              <h3>Support</h3>
+              <ul class="footerLinksList">
+                <li>
+                  <a href="#">Contact us</a>
+                </li>
+                <li>
+                  <a href="#">Track order</a>
+                </li>
+                <li>
+                  <a href="#">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="footerBottomArea">
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="text-center">
+                <div class="fw-bold">
+                  Copyright &copy;  <strong>Dorzi</strong>
+                  — All Rights Reserved
+                </div>
+                <!-- <small class="text-dark">Designed & Developed 
+                  by <span>
+                    <a target="_blank" href="#">Jayed Hossain</a>
+                  </span>
+                </small> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Added Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
-  </body>
-</html>
+    <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  
+
+</body>
